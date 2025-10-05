@@ -133,8 +133,6 @@ export default function Home() {
                 >
                   {/* Inner glow */}
                   <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent"></span>
-                  {/* Shine effect */}
-                  <span className="pointer-events-none absolute inset-y-0 left-0 w-12 -skew-x-12 bg-white/30 animate-[shine_2s_ease-in-out_infinite]"></span>
                   {/* Content */}
                   <span className="relative flex items-center gap-2">
                     <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
