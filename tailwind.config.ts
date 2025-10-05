@@ -145,6 +145,22 @@ export default {
             transform: "translateY(-25px) translateX(-15px)"
           }
         },
+        "wave-flow": {
+          "0%": { 
+            transform: "translateX(0)",
+          },
+          "100%": { 
+            transform: "translateX(-800px)",
+          },
+        },
+        "wave-flow-reverse": {
+          "0%": { 
+            transform: "translateX(-800px)",
+          },
+          "100%": { 
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -159,6 +175,11 @@ export default {
         "particle-flow-1": "particle-flow-1 8s ease-in-out infinite",
         "particle-flow-2": "particle-flow-2 12s ease-in-out infinite",
         "particle-flow-3": "particle-flow-3 10s ease-in-out infinite",
+        "wave-flow": "wave-flow 20s linear infinite",
+        "wave-flow-delayed": "wave-flow 25s linear infinite",
+        "wave-flow-reverse": "wave-flow-reverse 18s linear infinite",
+        "wave-flow-reverse-delayed": "wave-flow-reverse 22s linear infinite",
+        "wave-flow-slow": "wave-flow 30s linear infinite",
       },
     },
   },
