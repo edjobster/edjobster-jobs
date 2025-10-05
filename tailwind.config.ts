@@ -96,6 +96,11 @@ export default {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "200px 200px" }
         },
+        "shine": {
+          "0%": { transform: "translateX(-120%)" },
+          "40%": { transform: "translateX(260%)" },
+          "100%": { transform: "translateX(260%)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +109,7 @@ export default {
         "float-slow": "float-slow 10s ease-in-out infinite",
         "gradient-shift": "gradient-shift 12s ease infinite",
         "grid-pan": "grid-pan 20s linear infinite",
+        "shine": "shine 2s ease-in-out infinite",
       },
     },
   },

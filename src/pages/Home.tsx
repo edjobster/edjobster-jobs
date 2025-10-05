@@ -115,8 +115,8 @@ export default function Home() {
                 className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary-hover hover:shadow-soft transition-smooth hover:scale-105"
                 aria-label="Search Jobs"
               >
-                <span className="pointer-events-none absolute inset-y-0 left-0 w-8 -skew-x-12 bg-primary-foreground/20 translate-x-[-120%] group-hover:translate-x-[260%] transition-transform duration-700 ease-out"></span>
-                <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110" />
+                <span className="pointer-events-none absolute inset-y-0 left-0 w-8 -skew-x-12 bg-primary-foreground/20 animate-[shine_2s_ease-in-out_infinite]"></span>
+                <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
                 Search Jobs
               </Button>
             </div>
