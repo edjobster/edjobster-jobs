@@ -82,9 +82,9 @@ export default function Home() {
       {/* Hero Section with AI Search */}
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
         {/* Vertical Gradient Overlay - Dark blue at top/bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a8a]/60 via-transparent to-[#1e3a8a]/60 pointer-events-none z-[1]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a8a]/80 via-transparent to-[#1e3a8a]/80 pointer-events-none z-[1]"></div>
         {/* Animated AI Waves Background */}
-        <div className="absolute inset-0 overflow-hidden opacity-45">
+        <div className="absolute inset-0 overflow-hidden opacity-70">
           {/* Cyan Wave 1 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
