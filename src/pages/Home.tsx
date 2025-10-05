@@ -87,6 +87,21 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-primary/30 rounded-full blur-[130px] animate-float-slow mix-blend-screen"></div>
           <div className="absolute top-1/3 right-1/3 w-[420px] h-[420px] bg-primary/20 rounded-full blur-[110px] animate-float mix-blend-screen" style={{ animationDelay: '2s' }}></div>
           <div className="absolute inset-0 ai-grid opacity-60"></div>
+          {/* AI Waves */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full opacity-30">
+              <div className="absolute w-[200%] h-[200%] animate-[wave_15s_ease-in-out_infinite]" style={{
+                background: 'radial-gradient(ellipse at center, rgba(147, 197, 253, 0.4) 0%, transparent 50%)',
+                transform: 'translate(-25%, -25%)'
+              }}></div>
+            </div>
+            <div className="absolute top-0 left-0 w-full h-full opacity-20">
+              <div className="absolute w-[200%] h-[200%] animate-[wave_20s_ease-in-out_infinite_reverse]" style={{
+                background: 'radial-gradient(ellipse at center, rgba(96, 165, 250, 0.5) 0%, transparent 50%)',
+                transform: 'translate(-50%, -50%)'
+              }}></div>
+            </div>
+          </div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -99,26 +114,39 @@ export default function Home() {
             </p>
 
             {/* AI Search Bar */}
-            <div className="bg-white rounded-xl shadow-lg p-2 flex flex-col md:flex-row gap-2">
-              <div className="flex-1 flex items-center px-3 border-b md:border-b-0 md:border-r pb-2 md:pb-0">
-                <Search className="h-5 w-5 text-muted-foreground mr-2" />
+            <div className="bg-white rounded-full shadow-lg p-2 flex flex-col md:flex-row gap-2">
+              <div className="flex-1 flex items-center px-5 pb-2 md:pb-0">
+                <Search className="h-5 w-5 text-muted-foreground mr-3 flex-shrink-0" />
                 <Input
                   type="text"
                   placeholder="Search jobs, skills, or describe your ideal role..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="border-0 focus-visible:ring-0 text-foreground"
+                  autoFocus
                 />
               </div>
-              <Button
-                size="lg"
-                className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary-hover hover:shadow-soft transition-smooth hover:scale-105"
-                aria-label="Search Jobs"
-              >
-                <span className="pointer-events-none absolute inset-y-0 left-0 w-8 -skew-x-12 bg-primary-foreground/20 animate-[shine_2s_ease-in-out_infinite]"></span>
-                <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
-                Search Jobs
-              </Button>
+              <div className="relative">
+                {/* Shooting star outline animation */}
+                <span className="absolute inset-0 rounded-full animate-[spin-border_3s_linear_infinite]" 
+                      style={{
+                        background: 'linear-gradient(90deg, transparent 0%, transparent 70%, rgba(255,255,255,0.8) 85%, transparent 100%)',
+                        padding: '3px',
+                        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                        WebkitMaskComposite: 'xor',
+                        maskComposite: 'exclude'
+                      }}
+                ></span>
+                <Button
+                  size="lg"
+                  className="group relative overflow-hidden bg-gradient-to-r from-primary via-primary to-primary-hover text-primary-foreground shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] transition-all duration-300 hover:scale-105 rounded-full px-8"
+                  aria-label="Search Jobs"
+                >
+                  <span className="pointer-events-none absolute inset-y-0 left-0 w-12 -skew-x-12 bg-white/30 animate-[shine_2s_ease-in-out_infinite]"></span>
+                  <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
+                  Search Jobs
+                </Button>
+              </div>
             </div>
 
             {/* Popular Searches */}

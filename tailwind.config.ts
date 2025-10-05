@@ -101,6 +101,20 @@ export default {
           "40%": { transform: "translateX(260%)" },
           "100%": { transform: "translateX(260%)" }
         },
+        "spin-border": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
+        },
+        "wave": {
+          "0%, 100%": { 
+            transform: "translate(-25%, -25%) scale(1)",
+            opacity: "0.3"
+          },
+          "50%": { 
+            transform: "translate(-35%, -35%) scale(1.1)",
+            opacity: "0.5"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +124,8 @@ export default {
         "gradient-shift": "gradient-shift 12s ease infinite",
         "grid-pan": "grid-pan 20s linear infinite",
         "shine": "shine 2s ease-in-out infinite",
+        "spin-border": "spin-border 3s linear infinite",
+        "wave": "wave 15s ease-in-out infinite",
       },
     },
   },
