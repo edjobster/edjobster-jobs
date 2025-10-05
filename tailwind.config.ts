@@ -115,6 +115,36 @@ export default {
             opacity: "0.5"
           }
         },
+        "particle-flow-1": {
+          "0%, 100%": { 
+            backgroundPosition: "0% 50%",
+            transform: "translateY(0)"
+          },
+          "50%": { 
+            backgroundPosition: "100% 50%",
+            transform: "translateY(-20px)"
+          }
+        },
+        "particle-flow-2": {
+          "0%, 100%": { 
+            backgroundPosition: "100% 50%",
+            transform: "translateY(0) translateX(0)"
+          },
+          "50%": { 
+            backgroundPosition: "0% 50%",
+            transform: "translateY(-30px) translateX(20px)"
+          }
+        },
+        "particle-flow-3": {
+          "0%, 100%": { 
+            backgroundPosition: "50% 0%",
+            transform: "translateY(0) translateX(0)"
+          },
+          "50%": { 
+            backgroundPosition: "50% 100%",
+            transform: "translateY(-25px) translateX(-15px)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -126,6 +156,9 @@ export default {
         "shine": "shine 2s ease-in-out infinite",
         "spin-border": "spin-border 3s linear infinite",
         "wave": "wave 15s ease-in-out infinite",
+        "particle-flow-1": "particle-flow-1 8s ease-in-out infinite",
+        "particle-flow-2": "particle-flow-2 12s ease-in-out infinite",
+        "particle-flow-3": "particle-flow-3 10s ease-in-out infinite",
       },
     },
   },

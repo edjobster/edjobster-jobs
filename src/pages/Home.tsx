@@ -87,20 +87,11 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-primary/30 rounded-full blur-[130px] animate-float-slow mix-blend-screen"></div>
           <div className="absolute top-1/3 right-1/3 w-[420px] h-[420px] bg-primary/20 rounded-full blur-[110px] animate-float mix-blend-screen" style={{ animationDelay: '2s' }}></div>
           <div className="absolute inset-0 ai-grid opacity-60"></div>
-          {/* AI Waves */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full opacity-30">
-              <div className="absolute w-[200%] h-[200%] animate-[wave_15s_ease-in-out_infinite]" style={{
-                background: 'radial-gradient(ellipse at center, rgba(147, 197, 253, 0.4) 0%, transparent 50%)',
-                transform: 'translate(-25%, -25%)'
-              }}></div>
-            </div>
-            <div className="absolute top-0 left-0 w-full h-full opacity-20">
-              <div className="absolute w-[200%] h-[200%] animate-[wave_20s_ease-in-out_infinite_reverse]" style={{
-                background: 'radial-gradient(ellipse at center, rgba(96, 165, 250, 0.5) 0%, transparent 50%)',
-                transform: 'translate(-50%, -50%)'
-              }}></div>
-            </div>
+          {/* AI Particle Waves */}
+          <div className="absolute inset-0 overflow-hidden opacity-40">
+            <div className="absolute bottom-0 left-0 w-full h-[60%] particle-wave-1"></div>
+            <div className="absolute bottom-0 left-0 w-full h-[60%] particle-wave-2" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute bottom-0 left-0 w-full h-[60%] particle-wave-3" style={{ animationDelay: '4s' }}></div>
           </div>
         </div>
         
@@ -126,25 +117,29 @@ export default function Home() {
                   autoFocus
                 />
               </div>
-              <div className="relative">
+              <div className="relative p-[3px]">
                 {/* Shooting star outline animation */}
-                <span className="absolute inset-0 rounded-full animate-[spin-border_3s_linear_infinite]" 
-                      style={{
-                        background: 'linear-gradient(90deg, transparent 0%, transparent 70%, rgba(255,255,255,0.8) 85%, transparent 100%)',
-                        padding: '3px',
-                        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                        WebkitMaskComposite: 'xor',
-                        maskComposite: 'exclude'
-                      }}
-                ></span>
+                <div className="absolute inset-0 rounded-full overflow-hidden">
+                  <div className="absolute inset-0 rounded-full animate-[spin-border_3s_linear_infinite]" 
+                       style={{
+                         background: 'linear-gradient(90deg, transparent 0%, transparent 60%, rgba(147,197,253,1) 80%, rgba(255,255,255,1) 85%, rgba(147,197,253,1) 90%, transparent 100%)',
+                       }}
+                  ></div>
+                </div>
                 <Button
                   size="lg"
-                  className="group relative overflow-hidden bg-gradient-to-r from-primary via-primary to-primary-hover text-primary-foreground shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] transition-all duration-300 hover:scale-105 rounded-full px-8"
+                  className="group relative overflow-visible rounded-full px-8 bg-gradient-to-b from-[#7c3aed] via-[#6366f1] to-[#4f46e5] text-white shadow-[0_8px_32px_rgba(99,102,241,0.4),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(99,102,241,0.6),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105 border-0"
                   aria-label="Search Jobs"
                 >
+                  {/* Inner glow */}
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent"></span>
+                  {/* Shine effect */}
                   <span className="pointer-events-none absolute inset-y-0 left-0 w-12 -skew-x-12 bg-white/30 animate-[shine_2s_ease-in-out_infinite]"></span>
-                  <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
-                  Search Jobs
+                  {/* Content */}
+                  <span className="relative flex items-center gap-2">
+                    <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110 -scale-x-100" />
+                    Search Jobs
+                  </span>
                 </Button>
               </div>
             </div>
