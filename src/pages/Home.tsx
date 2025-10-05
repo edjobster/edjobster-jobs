@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, MapPin, Briefcase, Users, Building2, TrendingUp } from "lucide-react";
+import { Search, MapPin, Briefcase, Users, Building2, TrendingUp, Wand2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -83,9 +83,10 @@ export default function Home() {
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-white/30 rounded-full blur-[100px] animate-float"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/25 rounded-full blur-[120px] animate-float-slow"></div>
-          <div className="absolute top-1/3 right-1/3 w-[350px] h-[350px] bg-white/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-10 left-10 w-[480px] h-[480px] bg-primary/40 rounded-full blur-[110px] animate-float mix-blend-screen"></div>
+          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-primary/30 rounded-full blur-[130px] animate-float-slow mix-blend-screen"></div>
+          <div className="absolute top-1/3 right-1/3 w-[420px] h-[420px] bg-primary/20 rounded-full blur-[110px] animate-float mix-blend-screen" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute inset-0 ai-grid opacity-60"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -111,8 +112,11 @@ export default function Home() {
               </div>
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary-hover text-white"
+                className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary-hover hover:shadow-soft transition-smooth hover:scale-105"
+                aria-label="Search Jobs"
               >
+                <span className="pointer-events-none absolute inset-y-0 left-0 w-8 -skew-x-12 bg-primary-foreground/20 translate-x-[-120%] group-hover:translate-x-[260%] transition-transform duration-700 ease-out"></span>
+                <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110" />
                 Search Jobs
               </Button>
             </div>
