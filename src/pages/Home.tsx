@@ -90,7 +90,7 @@ export default function Home() {
               className="animate-wave-flow"
               fill="none"
               stroke="url(#gradient-cyan)"
-              strokeWidth="2.5"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <defs>
@@ -132,7 +132,7 @@ export default function Home() {
               className="animate-wave-flow-reverse"
               fill="none"
               stroke="url(#gradient-pink)"
-              strokeWidth="2.5"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <defs>
@@ -174,7 +174,7 @@ export default function Home() {
               className="animate-wave-flow-slow"
               fill="none"
               stroke="url(#gradient-cyan-3)"
-              strokeWidth="2"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <defs>
@@ -195,7 +195,7 @@ export default function Home() {
               className="animate-wave-flow-fast"
               fill="none"
               stroke="url(#gradient-purple)"
-              strokeWidth="2"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <defs>
@@ -216,7 +216,7 @@ export default function Home() {
               className="animate-wave-flow-medium"
               fill="none"
               stroke="url(#gradient-teal)"
-              strokeWidth="1.5"
+              strokeWidth="3"
               strokeLinecap="round"
             />
             <defs>
@@ -237,7 +237,7 @@ export default function Home() {
               className="animate-wave-flow-extra"
               fill="none"
               stroke="url(#gradient-cyan-4)"
-              strokeWidth="2"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <defs>
@@ -300,7 +300,7 @@ export default function Home() {
               className="animate-wave-flow-mega"
               fill="none"
               stroke="url(#gradient-teal-2)"
-              strokeWidth="1.5"
+              strokeWidth="3"
               strokeLinecap="round"
             />
             <defs>
@@ -342,7 +342,7 @@ export default function Home() {
               className="animate-wave-flow-reverse-hyper"
               fill="none"
               stroke="url(#gradient-pink-4)"
-              strokeWidth="1.5"
+              strokeWidth="3"
               strokeLinecap="round"
             />
             <defs>
@@ -352,6 +352,111 @@ export default function Home() {
                 <stop offset="50%" stopColor="rgba(236, 72, 153, 0.7)" />
                 <stop offset="70%" stopColor="rgba(236, 72, 153, 0.4)" />
                 <stop offset="100%" stopColor="rgba(236, 72, 153, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple-Yellow Wave 1 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,240 Q-400,170 0,240 T800,240 T1600,240 T2400,240 T3200,240"
+              className="animate-wave-flow-purple-yellow-1"
+              fill="none"
+              stroke="url(#gradient-purple-yellow-1)"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-yellow-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0)" />
+                <stop offset="25%" stopColor="rgba(168, 85, 247, 0.6)" />
+                <stop offset="50%" stopColor="rgba(234, 179, 8, 0.8)" />
+                <stop offset="75%" stopColor="rgba(168, 85, 247, 0.6)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple-Yellow Wave 2 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,310 Q-400,250 0,310 T800,310 T1600,310 T2400,310 T3200,310"
+              className="animate-wave-flow-purple-yellow-2"
+              fill="none"
+              stroke="url(#gradient-purple-yellow-2)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-yellow-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(234, 179, 8, 0)" />
+                <stop offset="30%" stopColor="rgba(234, 179, 8, 0.5)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.7)" />
+                <stop offset="70%" stopColor="rgba(234, 179, 8, 0.5)" />
+                <stop offset="100%" stopColor="rgba(234, 179, 8, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple-Yellow Wave 3 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,370 Q-400,300 0,370 T800,370 T1600,370 T2400,370 T3200,370"
+              className="animate-wave-flow-purple-yellow-3"
+              fill="none"
+              stroke="url(#gradient-purple-yellow-3)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-yellow-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0)" />
+                <stop offset="20%" stopColor="rgba(234, 179, 8, 0.4)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.8)" />
+                <stop offset="80%" stopColor="rgba(234, 179, 8, 0.4)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple-Yellow Wave 4 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,140 Q-400,80 0,140 T800,140 T1600,140 T2400,140 T3200,140"
+              className="animate-wave-flow-purple-yellow-4"
+              fill="none"
+              stroke="url(#gradient-purple-yellow-4)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-yellow-4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(234, 179, 8, 0)" />
+                <stop offset="25%" stopColor="rgba(168, 85, 247, 0.5)" />
+                <stop offset="50%" stopColor="rgba(234, 179, 8, 0.9)" />
+                <stop offset="75%" stopColor="rgba(168, 85, 247, 0.5)" />
+                <stop offset="100%" stopColor="rgba(234, 179, 8, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple-Yellow Wave 5 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,460 Q-400,390 0,460 T800,460 T1600,460 T2400,460 T3200,460"
+              className="animate-wave-flow-purple-yellow-5"
+              fill="none"
+              stroke="url(#gradient-purple-yellow-5)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-yellow-5" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0)" />
+                <stop offset="30%" stopColor="rgba(234, 179, 8, 0.6)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.8)" />
+                <stop offset="70%" stopColor="rgba(234, 179, 8, 0.6)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0)" />
               </linearGradient>
             </defs>
           </svg>
