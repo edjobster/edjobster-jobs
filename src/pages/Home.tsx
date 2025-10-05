@@ -81,12 +81,14 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section with AI Search */}
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
+        {/* Vertical Gradient Overlay - Dark blue at top/bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a8a]/60 via-transparent to-[#1e3a8a]/60 pointer-events-none z-[1]"></div>
         {/* Animated AI Waves Background */}
         <div className="absolute inset-0 overflow-hidden opacity-45">
-          {/* Cyan Wave 1 */}
+          {/* Cyan Wave 1 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,200 Q-400,100 0,200 T800,200 T1600,200 T2400,200 T3200,200"
+              d="M-800,120 Q-400,80 0,120 T800,120 T1600,120 T2400,120 T3200,120"
               className="animate-wave-flow"
               fill="none"
               stroke="url(#gradient-cyan)"
@@ -104,10 +106,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Cyan Wave 2 */}
+          {/* Cyan Wave 2 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,250 Q-400,150 0,250 T800,250 T1600,250 T2400,250 T3200,250"
+              d="M-800,80 Q-400,50 0,80 T800,80 T1600,80 T2400,80 T3200,80"
               className="animate-wave-flow-delayed"
               fill="none"
               stroke="url(#gradient-cyan-2)"
@@ -125,10 +127,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Pink/Magenta Wave 1 */}
+          {/* Pink/Magenta Wave 1 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,300 Q-400,200 0,300 T800,300 T1600,300 T2400,300 T3200,300"
+              d="M-800,70 Q-400,40 0,70 T800,70 T1600,70 T2400,70 T3200,70"
               className="animate-wave-flow-reverse"
               fill="none"
               stroke="url(#gradient-pink)"
@@ -146,10 +148,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Pink/Magenta Wave 2 */}
+          {/* Pink/Magenta Wave 2 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,350 Q-400,250 0,350 T800,350 T1600,350 T2400,350 T3200,350"
+              d="M-800,650 Q-400,620 0,650 T800,650 T1600,650 T2400,650 T3200,650"
               className="animate-wave-flow-reverse-delayed"
               fill="none"
               stroke="url(#gradient-pink-2)"
@@ -167,10 +169,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Additional Cyan Wave (Bottom) */}
+          {/* Additional Cyan Wave - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,420 Q-400,340 0,420 T800,420 T1600,420 T2400,420 T3200,420"
+              d="M-800,700 Q-400,670 0,700 T800,700 T1600,700 T2400,700 T3200,700"
               className="animate-wave-flow-slow"
               fill="none"
               stroke="url(#gradient-cyan-3)"
@@ -188,10 +190,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple Wave */}
+          {/* Purple Wave - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,180 Q-400,120 0,180 T800,180 T1600,180 T2400,180 T3200,180"
+              d="M-800,160 Q-400,130 0,160 T800,160 T1600,160 T2400,160 T3200,160"
               className="animate-wave-flow-fast"
               fill="none"
               stroke="url(#gradient-purple)"
@@ -209,10 +211,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Teal Wave */}
+          {/* Teal Wave - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,380 Q-400,310 0,380 T800,380 T1600,380 T2400,380 T3200,380"
+              d="M-800,190 Q-400,160 0,190 T800,190 T1600,190 T2400,190 T3200,190"
               className="animate-wave-flow-medium"
               fill="none"
               stroke="url(#gradient-teal)"
@@ -230,10 +232,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Cyan Wave 3 */}
+          {/* Cyan Wave 3 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,220 Q-400,140 0,220 T800,220 T1600,220 T2400,220 T3200,220"
+              d="M-800,100 Q-400,70 0,100 T800,100 T1600,100 T2400,100 T3200,100"
               className="animate-wave-flow-extra"
               fill="none"
               stroke="url(#gradient-cyan-4)"
@@ -251,10 +253,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Pink Wave 3 */}
+          {/* Pink Wave 3 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,280 Q-400,210 0,280 T800,280 T1600,280 T2400,280 T3200,280"
+              d="M-800,110 Q-400,80 0,110 T800,110 T1600,110 T2400,110 T3200,110"
               className="animate-wave-flow-reverse-extra"
               fill="none"
               stroke="url(#gradient-pink-3)"
@@ -272,10 +274,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple Wave 2 */}
+          {/* Purple Wave 2 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,330 Q-400,270 0,330 T800,330 T1600,330 T2400,330 T3200,330"
+              d="M-800,620 Q-400,590 0,620 T800,620 T1600,620 T2400,620 T3200,620"
               className="animate-wave-flow-ultra"
               fill="none"
               stroke="url(#gradient-purple-2)"
@@ -293,10 +295,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Teal Wave 2 */}
+          {/* Teal Wave 2 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,400 Q-400,330 0,400 T800,400 T1600,400 T2400,400 T3200,400"
+              d="M-800,730 Q-400,700 0,730 T800,730 T1600,730 T2400,730 T3200,730"
               className="animate-wave-flow-mega"
               fill="none"
               stroke="url(#gradient-teal-2)"
@@ -314,10 +316,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Cyan Wave 4 */}
+          {/* Cyan Wave 4 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,160 Q-400,90 0,160 T800,160 T1600,160 T2400,160 T3200,160"
+              d="M-800,50 Q-400,30 0,50 T800,50 T1600,50 T2400,50 T3200,50"
               className="animate-wave-flow-hyper"
               fill="none"
               stroke="url(#gradient-cyan-5)"
@@ -335,10 +337,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Pink Wave 4 */}
+          {/* Pink Wave 4 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,440 Q-400,370 0,440 T800,440 T1600,440 T2400,440 T3200,440"
+              d="M-800,680 Q-400,650 0,680 T800,680 T1600,680 T2400,680 T3200,680"
               className="animate-wave-flow-reverse-hyper"
               fill="none"
               stroke="url(#gradient-pink-4)"
@@ -356,10 +358,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple-Yellow Wave 1 */}
+          {/* Purple-Yellow Wave 1 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,240 Q-400,170 0,240 T800,240 T1600,240 T2400,240 T3200,240"
+              d="M-800,140 Q-400,110 0,140 T800,140 T1600,140 T2400,140 T3200,140"
               className="animate-wave-flow-purple-yellow-1"
               fill="none"
               stroke="url(#gradient-purple-yellow-1)"
@@ -377,10 +379,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple-Yellow Wave 2 */}
+          {/* Purple-Yellow Wave 2 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,310 Q-400,250 0,310 T800,310 T1600,310 T2400,310 T3200,310"
+              d="M-800,710 Q-400,680 0,710 T800,710 T1600,710 T2400,710 T3200,710"
               className="animate-wave-flow-purple-yellow-2"
               fill="none"
               stroke="url(#gradient-purple-yellow-2)"
@@ -398,10 +400,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple-Yellow Wave 3 */}
+          {/* Purple-Yellow Wave 3 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,370 Q-400,300 0,370 T800,370 T1600,370 T2400,370 T3200,370"
+              d="M-800,660 Q-400,630 0,660 T800,660 T1600,660 T2400,660 T3200,660"
               className="animate-wave-flow-purple-yellow-3"
               fill="none"
               stroke="url(#gradient-purple-yellow-3)"
@@ -419,10 +421,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple-Yellow Wave 4 */}
+          {/* Purple-Yellow Wave 4 - TOP */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,140 Q-400,80 0,140 T800,140 T1600,140 T2400,140 T3200,140"
+              d="M-800,180 Q-400,150 0,180 T800,180 T1600,180 T2400,180 T3200,180"
               className="animate-wave-flow-purple-yellow-4"
               fill="none"
               stroke="url(#gradient-purple-yellow-4)"
@@ -440,10 +442,10 @@ export default function Home() {
             </defs>
           </svg>
 
-          {/* Purple-Yellow Wave 5 */}
+          {/* Purple-Yellow Wave 5 - BOTTOM */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M-800,460 Q-400,390 0,460 T800,460 T1600,460 T2400,460 T3200,460"
+              d="M-800,740 Q-400,710 0,740 T800,740 T1600,740 T2400,740 T3200,740"
               className="animate-wave-flow-purple-yellow-5"
               fill="none"
               stroke="url(#gradient-purple-yellow-5)"
