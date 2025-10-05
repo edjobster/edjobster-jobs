@@ -486,12 +486,13 @@ export default function Home() {
                   autoFocus
                 />
               </div>
-              <div className="relative p-[3px]">
+              <div className="relative p-[4px]">
                 {/* Shooting star outline animation */}
                 <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <div className="absolute inset-0 rounded-full animate-[spin-border_3s_linear_infinite]" 
+                  <div className="absolute inset-0 rounded-full animate-[spin-border_2s_linear_infinite]" 
                        style={{
-                         background: 'linear-gradient(90deg, transparent 0%, transparent 60%, rgba(147,197,253,1) 80%, rgba(255,255,255,1) 85%, rgba(147,197,253,1) 90%, transparent 100%)',
+                         background: 'linear-gradient(90deg, transparent 0%, transparent 40%, rgba(96,165,250,1) 60%, rgba(147,197,253,1) 70%, rgba(255,255,255,1) 75%, rgba(147,197,253,1) 80%, rgba(96,165,250,1) 90%, transparent 100%)',
+                         boxShadow: '0 0 20px rgba(96,165,250,0.8)',
                        }}
                   ></div>
                 </div>
