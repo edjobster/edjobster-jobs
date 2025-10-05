@@ -150,15 +150,15 @@ export default {
             transform: "translateX(0)",
           },
           "100%": { 
-            transform: "translateX(-800px)",
+            transform: "translateX(800px)",
           },
         },
         "wave-flow-reverse": {
           "0%": { 
-            transform: "translateX(-800px)",
+            transform: "translateX(0)",
           },
           "100%": { 
-            transform: "translateX(0)",
+            transform: "translateX(-800px)",
           },
         },
       },
@@ -180,6 +180,8 @@ export default {
         "wave-flow-reverse": "wave-flow-reverse 18s linear infinite",
         "wave-flow-reverse-delayed": "wave-flow-reverse 22s linear infinite",
         "wave-flow-slow": "wave-flow 30s linear infinite",
+        "wave-flow-fast": "wave-flow 15s linear infinite",
+        "wave-flow-medium": "wave-flow-reverse 23s linear infinite",
       },
     },
   },

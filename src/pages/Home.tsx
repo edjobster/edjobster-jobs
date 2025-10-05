@@ -82,79 +82,150 @@ export default function Home() {
       {/* Hero Section with AI Search */}
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
         {/* Animated AI Waves Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Cyan Wave */}
-          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          {/* Cyan Wave 1 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M0,200 Q400,100 800,200 T1600,200 T2400,200 T3200,200"
+              d="M-800,200 Q-400,100 0,200 T800,200 T1600,200 T2400,200 T3200,200"
               className="animate-wave-flow"
               fill="none"
               stroke="url(#gradient-cyan)"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinecap="round"
-            />
-            <path
-              d="M0,250 Q400,150 800,250 T1600,250 T2400,250 T3200,250"
-              className="animate-wave-flow-delayed"
-              fill="none"
-              stroke="url(#gradient-cyan)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              opacity="0.6"
             />
             <defs>
               <linearGradient id="gradient-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="rgba(34, 211, 238, 0)" />
-                <stop offset="50%" stopColor="rgba(34, 211, 238, 0.8)" />
+                <stop offset="30%" stopColor="rgba(34, 211, 238, 0.6)" />
+                <stop offset="50%" stopColor="rgba(34, 211, 238, 0.9)" />
+                <stop offset="70%" stopColor="rgba(34, 211, 238, 0.6)" />
                 <stop offset="100%" stopColor="rgba(34, 211, 238, 0)" />
               </linearGradient>
             </defs>
           </svg>
 
-          {/* Pink/Magenta Wave */}
-          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+          {/* Cyan Wave 2 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M0,300 Q400,200 800,300 T1600,300 T2400,300 T3200,300"
+              d="M-800,250 Q-400,150 0,250 T800,250 T1600,250 T2400,250 T3200,250"
+              className="animate-wave-flow-delayed"
+              fill="none"
+              stroke="url(#gradient-cyan-2)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-cyan-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(34, 211, 238, 0)" />
+                <stop offset="30%" stopColor="rgba(34, 211, 238, 0.4)" />
+                <stop offset="50%" stopColor="rgba(34, 211, 238, 0.7)" />
+                <stop offset="70%" stopColor="rgba(34, 211, 238, 0.4)" />
+                <stop offset="100%" stopColor="rgba(34, 211, 238, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Pink/Magenta Wave 1 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,300 Q-400,200 0,300 T800,300 T1600,300 T2400,300 T3200,300"
               className="animate-wave-flow-reverse"
               fill="none"
               stroke="url(#gradient-pink)"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinecap="round"
-            />
-            <path
-              d="M0,350 Q400,250 800,350 T1600,350 T2400,350 T3200,350"
-              className="animate-wave-flow-reverse-delayed"
-              fill="none"
-              stroke="url(#gradient-pink)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              opacity="0.6"
             />
             <defs>
               <linearGradient id="gradient-pink" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="rgba(236, 72, 153, 0)" />
-                <stop offset="50%" stopColor="rgba(236, 72, 153, 0.8)" />
+                <stop offset="30%" stopColor="rgba(236, 72, 153, 0.6)" />
+                <stop offset="50%" stopColor="rgba(236, 72, 153, 0.9)" />
+                <stop offset="70%" stopColor="rgba(236, 72, 153, 0.6)" />
+                <stop offset="100%" stopColor="rgba(236, 72, 153, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Pink/Magenta Wave 2 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,350 Q-400,250 0,350 T800,350 T1600,350 T2400,350 T3200,350"
+              className="animate-wave-flow-reverse-delayed"
+              fill="none"
+              stroke="url(#gradient-pink-2)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-pink-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(236, 72, 153, 0)" />
+                <stop offset="30%" stopColor="rgba(236, 72, 153, 0.4)" />
+                <stop offset="50%" stopColor="rgba(236, 72, 153, 0.7)" />
+                <stop offset="70%" stopColor="rgba(236, 72, 153, 0.4)" />
                 <stop offset="100%" stopColor="rgba(236, 72, 153, 0)" />
               </linearGradient>
             </defs>
           </svg>
 
           {/* Additional Cyan Wave (Bottom) */}
-          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
-              d="M0,400 Q400,320 800,400 T1600,400 T2400,400 T3200,400"
+              d="M-800,420 Q-400,340 0,420 T800,420 T1600,420 T2400,420 T3200,420"
               className="animate-wave-flow-slow"
               fill="none"
-              stroke="url(#gradient-cyan-alt)"
-              strokeWidth="2.5"
+              stroke="url(#gradient-cyan-3)"
+              strokeWidth="2"
               strokeLinecap="round"
-              opacity="0.7"
             />
             <defs>
-              <linearGradient id="gradient-cyan-alt" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="gradient-cyan-3" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="rgba(6, 182, 212, 0)" />
-                <stop offset="50%" stopColor="rgba(6, 182, 212, 0.9)" />
+                <stop offset="30%" stopColor="rgba(6, 182, 212, 0.5)" />
+                <stop offset="50%" stopColor="rgba(6, 182, 212, 0.8)" />
+                <stop offset="70%" stopColor="rgba(6, 182, 212, 0.5)" />
                 <stop offset="100%" stopColor="rgba(6, 182, 212, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple Wave */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,180 Q-400,120 0,180 T800,180 T1600,180 T2400,180 T3200,180"
+              className="animate-wave-flow-fast"
+              fill="none"
+              stroke="url(#gradient-purple)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0)" />
+                <stop offset="30%" stopColor="rgba(168, 85, 247, 0.4)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.7)" />
+                <stop offset="70%" stopColor="rgba(168, 85, 247, 0.4)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Teal Wave */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,380 Q-400,310 0,380 T800,380 T1600,380 T2400,380 T3200,380"
+              className="animate-wave-flow-medium"
+              fill="none"
+              stroke="url(#gradient-teal)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(20, 184, 166, 0)" />
+                <stop offset="30%" stopColor="rgba(20, 184, 166, 0.5)" />
+                <stop offset="50%" stopColor="rgba(20, 184, 166, 0.8)" />
+                <stop offset="70%" stopColor="rgba(20, 184, 166, 0.5)" />
+                <stop offset="100%" stopColor="rgba(20, 184, 166, 0)" />
               </linearGradient>
             </defs>
           </svg>
