@@ -80,11 +80,18 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with AI Search */}
-      <section className="gradient-hero text-white py-20 md:py-28">
-        <div className="container mx-auto px-4">
+      <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Find Your Next Opportunity with AI-Powered Search
+              AI-Powered Job Search<br />Made Simple
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-95">
               Type naturally — we'll understand your skills, role, and goals.
