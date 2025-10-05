@@ -82,10 +82,10 @@ export default function Home() {
       {/* Hero Section with AI Search */}
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-50">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-white/15 rounded-full blur-3xl animate-float-slow"></div>
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-white/30 rounded-full blur-[100px] animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/25 rounded-full blur-[120px] animate-float-slow"></div>
+          <div className="absolute top-1/3 right-1/3 w-[350px] h-[350px] bg-white/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
