@@ -82,7 +82,7 @@ export default function Home() {
       {/* Hero Section with AI Search */}
       <section className="relative gradient-hero text-white py-20 md:py-28 overflow-hidden">
         {/* Animated AI Waves Background */}
-        <div className="absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute inset-0 overflow-hidden opacity-45">
           {/* Cyan Wave 1 */}
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
             <path
@@ -226,6 +226,132 @@ export default function Home() {
                 <stop offset="50%" stopColor="rgba(20, 184, 166, 0.8)" />
                 <stop offset="70%" stopColor="rgba(20, 184, 166, 0.5)" />
                 <stop offset="100%" stopColor="rgba(20, 184, 166, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Cyan Wave 3 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,220 Q-400,140 0,220 T800,220 T1600,220 T2400,220 T3200,220"
+              className="animate-wave-flow-extra"
+              fill="none"
+              stroke="url(#gradient-cyan-4)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-cyan-4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(34, 211, 238, 0)" />
+                <stop offset="30%" stopColor="rgba(34, 211, 238, 0.5)" />
+                <stop offset="50%" stopColor="rgba(34, 211, 238, 0.8)" />
+                <stop offset="70%" stopColor="rgba(34, 211, 238, 0.5)" />
+                <stop offset="100%" stopColor="rgba(34, 211, 238, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Pink Wave 3 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,280 Q-400,210 0,280 T800,280 T1600,280 T2400,280 T3200,280"
+              className="animate-wave-flow-reverse-extra"
+              fill="none"
+              stroke="url(#gradient-pink-3)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-pink-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(236, 72, 153, 0)" />
+                <stop offset="30%" stopColor="rgba(236, 72, 153, 0.5)" />
+                <stop offset="50%" stopColor="rgba(236, 72, 153, 0.8)" />
+                <stop offset="70%" stopColor="rgba(236, 72, 153, 0.5)" />
+                <stop offset="100%" stopColor="rgba(236, 72, 153, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Purple Wave 2 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,330 Q-400,270 0,330 T800,330 T1600,330 T2400,330 T3200,330"
+              className="animate-wave-flow-ultra"
+              fill="none"
+              stroke="url(#gradient-purple-2)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-purple-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0)" />
+                <stop offset="30%" stopColor="rgba(168, 85, 247, 0.5)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.8)" />
+                <stop offset="70%" stopColor="rgba(168, 85, 247, 0.5)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Teal Wave 2 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,400 Q-400,330 0,400 T800,400 T1600,400 T2400,400 T3200,400"
+              className="animate-wave-flow-mega"
+              fill="none"
+              stroke="url(#gradient-teal-2)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-teal-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(20, 184, 166, 0)" />
+                <stop offset="30%" stopColor="rgba(20, 184, 166, 0.4)" />
+                <stop offset="50%" stopColor="rgba(20, 184, 166, 0.7)" />
+                <stop offset="70%" stopColor="rgba(20, 184, 166, 0.4)" />
+                <stop offset="100%" stopColor="rgba(20, 184, 166, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Cyan Wave 4 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,160 Q-400,90 0,160 T800,160 T1600,160 T2400,160 T3200,160"
+              className="animate-wave-flow-hyper"
+              fill="none"
+              stroke="url(#gradient-cyan-5)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-cyan-5" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(34, 211, 238, 0)" />
+                <stop offset="30%" stopColor="rgba(34, 211, 238, 0.4)" />
+                <stop offset="50%" stopColor="rgba(34, 211, 238, 0.7)" />
+                <stop offset="70%" stopColor="rgba(34, 211, 238, 0.4)" />
+                <stop offset="100%" stopColor="rgba(34, 211, 238, 0)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Pink Wave 4 */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1600 800">
+            <path
+              d="M-800,440 Q-400,370 0,440 T800,440 T1600,440 T2400,440 T3200,440"
+              className="animate-wave-flow-reverse-hyper"
+              fill="none"
+              stroke="url(#gradient-pink-4)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="gradient-pink-4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(236, 72, 153, 0)" />
+                <stop offset="30%" stopColor="rgba(236, 72, 153, 0.4)" />
+                <stop offset="50%" stopColor="rgba(236, 72, 153, 0.7)" />
+                <stop offset="70%" stopColor="rgba(236, 72, 153, 0.4)" />
+                <stop offset="100%" stopColor="rgba(236, 72, 153, 0)" />
               </linearGradient>
             </defs>
           </svg>
