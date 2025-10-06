@@ -589,40 +589,43 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredJobs.map((job) => (
-              <Card
+              <Link
                 key={job.id}
-                className="hover:shadow-soft transition-smooth cursor-pointer"
+                to={job.id === 1 ? `/jobs/${job.id}` : "#"}
+                className="block"
               >
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-2 line-clamp-2">
-                    {job.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-3">{job.company}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4 mr-2" />
-                      {job.location}
+                <Card className="hover:shadow-soft transition-smooth cursor-pointer h-full">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+                      {job.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-3">{job.company}</p>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <MapPin className="h-4 w-4 mr-2" />
+                        {job.location}
+                      </div>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Briefcase className="h-4 w-4 mr-2" />
+                        {job.type} • {job.experience}
+                      </div>
                     </div>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Briefcase className="h-4 w-4 mr-2" />
-                      {job.type} • {job.experience}
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {job.skills.map((skill, index) => (
+                        <Badge key={index} variant="secondary" className="text-xs">
+                          {skill}
+                        </Badge>
+                      ))}
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {job.skills.map((skill, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-semibold text-primary">{job.salary}</span>
-                    <Button size="sm" className="bg-primary hover:bg-primary-hover">
-                      Apply
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-primary">{job.salary}</span>
+                      <Button size="sm" className="bg-primary hover:bg-primary-hover">
+                        {job.id === 1 ? "View Details" : "Apply"}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
