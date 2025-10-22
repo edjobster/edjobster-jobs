@@ -12,6 +12,12 @@ import Companies from "./pages/Companies";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import Dashboard from "./pages/Dashboard";
+import SavedJobs from "./pages/SavedJobs";
+import Applications from "./pages/Applications";
+import Profile from "./pages/Profile";
+import CVTuner from "./pages/CVTuner";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +37,12 @@ const App = () => (
               <Route path="/companies" element={<Companies />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/saved-jobs" element={<SavedJobs />} />
+              <Route path="/applications" element={<Applications />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/cv-tuner" element={<CVTuner />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
