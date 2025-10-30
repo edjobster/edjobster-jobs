@@ -172,18 +172,16 @@ export default function JobDetails() {
       {/* Header */}
       <div className="bg-background border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Link to="/jobs">
-                <Button variant="ghost" size="sm">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Jobs
-                </Button>
-              </Link>
+          <div className="flex items-center gap-3">
+            <Link to="/jobs">
+              <Button variant="ghost" size="icon">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+            </Link>
+            <div className="flex-1 min-w-0">
+              <h1 className="text-lg md:text-xl font-semibold truncate">{job.title}</h1>
+              <p className="text-sm text-muted-foreground truncate">{job.company}</p>
             </div>
-            <Button onClick={handleApply} size="lg">
-              Apply Now
-            </Button>
           </div>
         </div>
       </div>
@@ -524,29 +522,6 @@ export default function JobDetails() {
 
           {/* Right Sidebar */}
           <div className="space-y-6">
-            {/* Apply Card - Sticky */}
-            <Card className="sticky top-24">
-              <CardHeader>
-                <CardTitle>Apply for this Job</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Button onClick={handleApply} className="w-full" size="lg">
-                  Apply Now
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={handleSaveJob}
-                >
-                  <Bookmark className={`mr-2 h-4 w-4 ${isSaved ? "fill-current" : ""}`} />
-                  {isSaved ? "Saved" : "Save Job"}
-                </Button>
-                <p className="text-xs text-center text-muted-foreground">
-                  Applications close on {job.applicationDeadline}
-                </p>
-              </CardContent>
-            </Card>
-
             {/* Company Overview */}
             <Card>
               <CardHeader>
