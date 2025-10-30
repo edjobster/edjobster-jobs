@@ -89,30 +89,34 @@ export default function JobApplication() {
       {/* Steps Indicator */}
       <div className="bg-background border-b">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
-            {steps.map((step, index) => (
-              <div key={step.number} className="flex items-center flex-1">
-                <div className="flex flex-col items-center gap-2 flex-1">
-                  <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold transition-all ${
-                      currentStep === step.number
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : currentStep > step.number
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-border bg-background text-muted-foreground"
-                    }`}
-                  >
-                    {step.number}
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-start justify-between">
+              {steps.map((step, index) => (
+                <div key={step.number} className="flex items-center flex-1">
+                  <div className="flex flex-col items-center gap-2 flex-1">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold transition-all ${
+                        currentStep === step.number
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : currentStep > step.number
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-border bg-background text-muted-foreground"
+                      }`}
+                    >
+                      {step.number}
+                    </div>
+                    <p className={`font-semibold text-xs md:text-sm text-center ${currentStep >= step.number ? "text-foreground" : "text-muted-foreground"}`}>
+                      {step.title}
+                    </p>
                   </div>
-                  <p className={`font-semibold text-xs md:text-sm text-center ${currentStep >= step.number ? "text-foreground" : "text-muted-foreground"}`}>
-                    {step.title}
-                  </p>
+                  {index < steps.length - 1 && (
+                    <div className="flex items-center" style={{ marginTop: '20px' }}>
+                      <div className={`h-0.5 w-full min-w-[40px] md:min-w-[60px] ${currentStep > step.number ? "bg-primary" : "bg-border"}`} />
+                    </div>
+                  )}
                 </div>
-                {index < steps.length - 1 && (
-                  <div className={`h-0.5 w-full mx-2 md:mx-4 ${currentStep > step.number ? "bg-primary" : "bg-border"}`} />
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
