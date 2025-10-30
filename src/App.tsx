@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer";
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 import JobDetails from "./pages/JobDetails";
+import JobApplication from "./pages/JobApplication";
 import Companies from "./pages/Companies";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -32,9 +33,10 @@ const App = () => (
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/jobs" element={<Jobs />} />
-              <Route path="/jobs/:id" element={<JobDetails />} />
-              <Route path="/companies" element={<Companies />} />
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs/:id" element={<JobDetails />} />
+            <Route path="/jobs/:id/apply" element={<JobApplication />} />
+            <Route path="/companies" element={<Companies />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />

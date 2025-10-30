@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   Briefcase,
   MapPin,
@@ -39,6 +39,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function JobDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [isSaved, setIsSaved] = useState(false);
   const [descriptionOpen, setDescriptionOpen] = useState(true);
@@ -163,10 +164,7 @@ export default function JobDetails() {
   };
 
   const handleApply = () => {
-    toast({
-      title: "Application Started",
-      description: "Redirecting to application form...",
-    });
+    navigate(`/jobs/${id}/apply`);
   };
 
   return (
