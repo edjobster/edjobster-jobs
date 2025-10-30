@@ -24,6 +24,9 @@ export function PreviewStep({ candidateData, assessmentData, onBack, onSubmit, o
     professional: true,
     address: true,
     skills: true,
+    experience: true,
+    education: true,
+    attachments: true,
     assessment: true,
   });
 
@@ -87,6 +90,7 @@ export function PreviewStep({ candidateData, assessmentData, onBack, onSubmit, o
                 <InfoRow label="Phone" value={candidateData.phone} />
                 {candidateData.alternatePhone && <InfoRow label="Alternate Phone" value={candidateData.alternatePhone} />}
                 {candidateData.dateOfBirth && <InfoRow label="Date of Birth" value={candidateData.dateOfBirth} />}
+                {candidateData.age && <InfoRow label="Age" value={`${candidateData.age} years`} />}
                 {candidateData.gender && <InfoRow label="Gender" value={candidateData.gender} />}
                 {candidateData.maritalStatus && <InfoRow label="Marital Status" value={candidateData.maritalStatus} />}
               </div>
@@ -110,16 +114,24 @@ export function PreviewStep({ candidateData, assessmentData, onBack, onSubmit, o
                 {candidateData.highestQualification && <InfoRow label="Highest Qualification" value={candidateData.highestQualification} />}
                 {candidateData.currentEmployer && <InfoRow label="Current Employer" value={candidateData.currentEmployer} />}
                 {candidateData.currentJobTitle && <InfoRow label="Current Job Title" value={candidateData.currentJobTitle} />}
+                {candidateData.currentlyWorking !== undefined && (
+                  <InfoRow label="Currently Working" value={candidateData.currentlyWorking ? "Yes" : "No"} />
+                )}
+                {candidateData.employmentStartDate && <InfoRow label="Employment Start Date" value={candidateData.employmentStartDate} />}
+                {candidateData.employmentEndDate && <InfoRow label="Employment End Date" value={candidateData.employmentEndDate} />}
+                {candidateData.professionalDegree && <InfoRow label="Professional Degree" value={candidateData.professionalDegree} />}
+                {candidateData.professionalCertificate && <InfoRow label="Professional Certificate" value={candidateData.professionalCertificate} />}
+                {candidateData.functionalArea && <InfoRow label="Functional Area" value={candidateData.functionalArea} />}
                 {candidateData.currentSalary && (
                   <InfoRow
                     label="Current Salary"
-                    value={`${candidateData.currency} ${Number(candidateData.currentSalary).toLocaleString()}`}
+                    value={`${candidateData.currency || 'INR'} ${Number(candidateData.currentSalary).toLocaleString()}`}
                   />
                 )}
                 {candidateData.expectedSalary && (
                   <InfoRow
                     label="Expected Salary"
-                    value={`${candidateData.currency} ${Number(candidateData.expectedSalary).toLocaleString()}`}
+                    value={`${candidateData.currency || 'INR'} ${Number(candidateData.expectedSalary).toLocaleString()}`}
                   />
                 )}
                 {candidateData.noticePeriod && <InfoRow label="Notice Period" value={candidateData.noticePeriod} />}
@@ -175,6 +187,99 @@ export function PreviewStep({ candidateData, assessmentData, onBack, onSubmit, o
             </div>
           </Collapsible>
         )}
+
+        {/* Experience */}
+        {candidateData.experience && candidateData.experience.length > 0 && (
+          <Collapsible open={sectionsOpen.experience} onOpenChange={() => toggleSection("experience")}>
+            <div className="border rounded-lg">
+              <CollapsibleTrigger className="flex items-center justify-between w-full p-4 hover:bg-muted/50 transition-colors">
+                <h3 className="text-lg font-semibold">Experience</h3>
+                <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); onEdit(1); }}>
+                  <Edit className="h-3 w-3 mr-1" />
+                  Edit
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="px-4 pb-4 space-y-4">
+                  {candidateData.experience.map((exp: any, index: number) => (
+                    <div key={exp.id} className="space-y-2">
+                      <h4 className="font-semibold text-sm">Experience {index + 1}</h4>
+                      <div className="pl-4 space-y-1">
+                        <InfoRow label="Company" value={exp.company} />
+                        <InfoRow label="Designation" value={exp.designation} />
+                        {exp.responsibilities && <InfoRow label="Responsibilities" value={exp.responsibilities} />}
+                        {exp.fromDate && <InfoRow label="From" value={exp.fromDate} />}
+                        {exp.toDate && <InfoRow label="To" value={exp.toDate} />}
+                      </div>
+                      {index < candidateData.experience.length - 1 && <Separator className="mt-4" />}
+                    </div>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </div>
+          </Collapsible>
+        )}
+
+        {/* Education */}
+        {candidateData.education && candidateData.education.length > 0 && (
+          <Collapsible open={sectionsOpen.education} onOpenChange={() => toggleSection("education")}>
+            <div className="border rounded-lg">
+              <CollapsibleTrigger className="flex items-center justify-between w-full p-4 hover:bg-muted/50 transition-colors">
+                <h3 className="text-lg font-semibold">Education</h3>
+                <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); onEdit(1); }}>
+                  <Edit className="h-3 w-3 mr-1" />
+                  Edit
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="px-4 pb-4 space-y-4">
+                  {candidateData.education.map((edu: any, index: number) => (
+                    <div key={edu.id} className="space-y-2">
+                      <h4 className="font-semibold text-sm">Education {index + 1}</h4>
+                      <div className="pl-4 space-y-1">
+                        <InfoRow label="School/University" value={edu.schoolName} />
+                        <InfoRow label="Degree" value={edu.degree} />
+                        {edu.specialization && <InfoRow label="Specialization" value={edu.specialization} />}
+                        {edu.startDate && <InfoRow label="Start Date" value={edu.startDate} />}
+                        {edu.endDate && <InfoRow label="End Date" value={edu.endDate} />}
+                      </div>
+                      {index < candidateData.education.length - 1 && <Separator className="mt-4" />}
+                    </div>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </div>
+          </Collapsible>
+        )}
+
+        {/* Attachments */}
+        <Collapsible open={sectionsOpen.attachments} onOpenChange={() => toggleSection("attachments")}>
+          <div className="border rounded-lg">
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 hover:bg-muted/50 transition-colors">
+              <h3 className="text-lg font-semibold">Attachments</h3>
+              <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); onEdit(1); }}>
+                <Edit className="h-3 w-3 mr-1" />
+                Edit
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <div className="px-4 pb-4 space-y-2">
+                <InfoRow label="Resume" value={candidateData.resume || "Not uploaded"} />
+                <InfoRow label="Cover Letter" value={candidateData.coverLetter || "Not uploaded"} />
+                {candidateData.certificates && candidateData.certificates.length > 0 && (
+                  <div className="flex justify-between py-2">
+                    <span className="text-muted-foreground">Certificates:</span>
+                    <div className="text-right space-y-1">
+                      {candidateData.certificates.map((cert: string, index: number) => (
+                        <div key={index} className="text-sm">{cert}</div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </CollapsibleContent>
+          </div>
+        </Collapsible>
 
         {/* Assessment Answers */}
         <Collapsible open={sectionsOpen.assessment} onOpenChange={() => toggleSection("assessment")}>
