@@ -1018,7 +1018,7 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Cover Letter */}
                 <div>
-                  <Label>Cover Letter (Optional)</Label>
+                  <Label>Cover Letter</Label>
                   <div className="mt-2">
                     <input
                       type="file"
@@ -1057,7 +1057,7 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
                 {/* Certificates */}
                 <div>
-                  <Label>Certificates (Optional, Multiple)</Label>
+                  <Label>Certificates</Label>
                   <div className="mt-2 space-y-3">
                     {certificates.map((cert, index) => (
                       <div key={index} className="flex items-center gap-2 p-3 border rounded-lg bg-muted/50">
