@@ -308,9 +308,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Personal Details */}
           <Collapsible open={sectionsOpen.personal} onOpenChange={() => toggleSection("personal")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Personal Details</h3>
-              {sectionsOpen.personal ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Personal Details</h3>
+              {sectionsOpen.personal ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -482,9 +482,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Professional Details */}
           <Collapsible open={sectionsOpen.professional} onOpenChange={() => toggleSection("professional")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Professional Details</h3>
-              {sectionsOpen.professional ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Professional Details</h3>
+              {sectionsOpen.professional ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -749,9 +749,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Address */}
           <Collapsible open={sectionsOpen.address} onOpenChange={() => toggleSection("address")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Address</h3>
-              {sectionsOpen.address ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Address</h3>
+              {sectionsOpen.address ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -828,9 +828,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Skills */}
           <Collapsible open={sectionsOpen.skills} onOpenChange={() => toggleSection("skills")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Skills</h3>
-              {sectionsOpen.skills ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Skills</h3>
+              {sectionsOpen.skills ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="space-y-4">
@@ -863,9 +863,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Experience */}
           <Collapsible open={sectionsOpen.experience} onOpenChange={() => toggleSection("experience")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Experience</h3>
-              {sectionsOpen.experience ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Experience</h3>
+              {sectionsOpen.experience ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="space-y-4">
@@ -937,9 +937,9 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Education */}
           <Collapsible open={sectionsOpen.education} onOpenChange={() => toggleSection("education")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Education</h3>
-              {sectionsOpen.education ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Education</h3>
+              {sectionsOpen.education ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
               <div className="space-y-4">
@@ -1010,12 +1010,12 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
 
           {/* Attachments */}
           <Collapsible open={sectionsOpen.attachments} onOpenChange={() => toggleSection("attachments")}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
-              <h3 className="text-lg font-semibold">Attachments</h3>
-              {sectionsOpen.attachments ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-primary/10 rounded-lg hover:bg-primary/15 transition-colors border-l-4 border-primary">
+              <h3 className="text-lg font-bold text-primary">Attachments</h3>
+              {sectionsOpen.attachments ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
             </CollapsibleTrigger>
             <CollapsibleContent className="pt-4">
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Cover Letter */}
                 <div>
                   <Label>Cover Letter (Optional)</Label>
