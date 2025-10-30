@@ -18,9 +18,9 @@ export default function JobApplication() {
   const [assessmentData, setAssessmentData] = useState<any>({});
 
   const steps = [
-    { number: 1, title: "Candidate Details", subtitle: "Personal & Professional Info" },
-    { number: 2, title: "Assessments", subtitle: "Screening Questions" },
-    { number: 3, title: "Preview & Submit", subtitle: "Review Your Application" },
+    { number: 1, title: "Candidate Details" },
+    { number: 2, title: "Screening Questions" },
+    { number: 3, title: "Preview & Submit" },
   ];
 
   const progressPercentage = (currentStep / steps.length) * 100;
@@ -74,24 +74,14 @@ export default function JobApplication() {
       {/* Header */}
       <div className="bg-background border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-4">
-            <Button variant="ghost" onClick={handleBack}>
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              {currentStep === 1 ? "Back to Job" : "Previous"}
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" size="icon" onClick={handleBack}>
+              <ArrowLeft className="h-4 w-4" />
             </Button>
-            <Button variant="outline" onClick={handleSave}>
-              <Save className="mr-2 h-4 w-4" />
-              Save & Continue Later
-            </Button>
-          </div>
-
-          {/* Progress Bar */}
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm">
-              <span className="font-medium text-foreground">Step {currentStep} of {steps.length}</span>
-              <span className="text-muted-foreground">{Math.round(progressPercentage)}% Complete</span>
+            <div className="flex-1 min-w-0">
+              <h1 className="font-semibold text-base md:text-lg truncate">Senior Frontend Developer</h1>
+              <p className="text-sm text-muted-foreground truncate">Tech Corp Inc.</p>
             </div>
-            <Progress value={progressPercentage} className="h-2" />
           </div>
         </div>
       </div>
@@ -102,7 +92,7 @@ export default function JobApplication() {
           <div className="flex justify-between items-center">
             {steps.map((step, index) => (
               <div key={step.number} className="flex items-center flex-1">
-                <div className="flex items-center gap-3 flex-1">
+                <div className="flex flex-col items-center gap-2 flex-1">
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold transition-all ${
                       currentStep === step.number
@@ -114,15 +104,12 @@ export default function JobApplication() {
                   >
                     {step.number}
                   </div>
-                  <div className="flex-1 hidden md:block">
-                    <p className={`font-semibold text-sm ${currentStep >= step.number ? "text-foreground" : "text-muted-foreground"}`}>
-                      {step.title}
-                    </p>
-                    <p className="text-xs text-muted-foreground">{step.subtitle}</p>
-                  </div>
+                  <p className={`font-semibold text-xs md:text-sm text-center ${currentStep >= step.number ? "text-foreground" : "text-muted-foreground"}`}>
+                    {step.title}
+                  </p>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className={`h-0.5 w-full mx-4 ${currentStep > step.number ? "bg-primary" : "bg-border"}`} />
+                  <div className={`h-0.5 w-full mx-2 md:mx-4 ${currentStep > step.number ? "bg-primary" : "bg-border"}`} />
                 )}
               </div>
             ))}
