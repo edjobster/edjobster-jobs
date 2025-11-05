@@ -1110,11 +1110,11 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                      className="mt-1"
+                      className="mt-1 rounded-sm"
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel className="text-sm font-normal leading-relaxed">
+                    <FormLabel className="text-sm font-normal leading-relaxed cursor-pointer">
                       I confirm my information is accurate and I agree to Edjobster's{" "}
                       <a
                         href="https://edjobster.com/privacy-policy"
@@ -1143,7 +1143,7 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex justify-between pt-6">
+          <div className="flex justify-end gap-3 pt-6">
             <Button type="button" variant="outline" onClick={onBack}>
               Back
             </Button>
