@@ -65,6 +65,11 @@ const candidateSchema = z.object({
   state: z.string().min(1, "State is required"),
   city: z.string().min(1, "City is required"),
   pincode: z.string().min(1, "Pincode is required"),
+  
+  // Consent
+  consent: z.boolean().refine((val) => val === true, {
+    message: "Please accept to proceed.",
+  }),
 });
 
 type CandidateFormData = z.infer<typeof candidateSchema>;
@@ -1094,8 +1099,51 @@ export function CandidateDetailsStep({ initialData, onNext, onBack }: Props) {
             </CollapsibleContent>
           </Collapsible>
 
+          {/* Consent Section */}
+          <div className="pt-6 border-t">
+            <FormField
+              control={form.control}
+              name="consent"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      className="mt-1"
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="text-sm font-normal leading-relaxed">
+                      I confirm my information is accurate and I agree to Edjobster's{" "}
+                      <a
+                        href="https://edjobster.com/privacy-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline hover:text-primary/80 transition-colors"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="https://edjobster.com/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline hover:text-primary/80 transition-colors"
+                      >
+                        Terms of Service
+                      </a>
+                      . I consent to being contacted regarding job opportunities and relevant updates (opt-out anytime).
+                    </FormLabel>
+                    <FormMessage />
+                  </div>
+                </FormItem>
+              )}
+            />
+          </div>
+
           {/* Action Buttons */}
-          <div className="flex justify-between pt-6 border-t">
+          <div className="flex justify-between pt-6">
             <Button type="button" variant="outline" onClick={onBack}>
               Back
             </Button>
