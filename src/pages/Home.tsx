@@ -486,13 +486,18 @@ export default function Home() {
                   autoFocus
                 />
               </div>
-              <div className="relative p-[4px]">
-                {/* Shooting star outline animation */}
-                <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <div className="absolute inset-0 rounded-full animate-[spin-border_2s_linear_infinite]" 
+              <div className="relative p-[3px]">
+                {/* Animated glowing outline */}
+                <div className="absolute inset-0 rounded-full">
+                  <div className="absolute inset-0 rounded-full animate-spin-border" 
                        style={{
-                         background: 'linear-gradient(90deg, transparent 0%, transparent 40%, rgba(96,165,250,1) 60%, rgba(147,197,253,1) 70%, rgba(255,255,255,1) 75%, rgba(147,197,253,1) 80%, rgba(96,165,250,1) 90%, transparent 100%)',
-                         boxShadow: '0 0 20px rgba(96,165,250,0.8)',
+                         background: 'conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(147,197,253,1) 85%, rgba(255,255,255,1) 90%, rgba(147,197,253,1) 95%, transparent 100%, transparent 0%)',
+                         filter: 'blur(4px)',
+                       }}
+                  ></div>
+                  <div className="absolute inset-0 rounded-full animate-spin-border" 
+                       style={{
+                         background: 'conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(96,165,250,1) 85%, rgba(147,197,253,1) 90%, rgba(96,165,250,1) 95%, transparent 100%, transparent 0%)',
                        }}
                   ></div>
                 </div>
