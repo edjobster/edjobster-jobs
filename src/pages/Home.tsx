@@ -486,18 +486,12 @@ export default function Home() {
                   autoFocus
                 />
               </div>
-              <div className="relative p-[3px]">
+              <div className="relative p-[2px]">
                 {/* Animated glowing outline */}
-                <div className="absolute inset-0 rounded-full">
+                <div className="absolute inset-0 rounded-full overflow-hidden">
                   <div className="absolute inset-0 rounded-full animate-spin-border" 
                        style={{
-                         background: 'conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(147,197,253,1) 85%, rgba(255,255,255,1) 90%, rgba(147,197,253,1) 95%, transparent 100%, transparent 0%)',
-                         filter: 'blur(4px)',
-                       }}
-                  ></div>
-                  <div className="absolute inset-0 rounded-full animate-spin-border" 
-                       style={{
-                         background: 'conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(96,165,250,1) 85%, rgba(147,197,253,1) 90%, rgba(96,165,250,1) 95%, transparent 100%, transparent 0%)',
+                         background: 'conic-gradient(from 0deg, transparent 0%, transparent 60%, rgba(147,197,253,0.6) 75%, rgba(255,255,255,1) 80%, rgba(147,197,253,0.6) 85%, transparent 100%)',
                        }}
                   ></div>
                 </div>
