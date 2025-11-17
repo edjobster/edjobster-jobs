@@ -474,19 +474,19 @@ export default function Home() {
             </p>
 
             {/* AI Search Bar */}
-            <div className="bg-white rounded-full shadow-lg p-2 flex flex-col md:flex-row gap-2">
-              <div className="flex-1 flex items-center px-5 pb-2 md:pb-0">
+            <div className="bg-white rounded-3xl md:rounded-full shadow-lg p-3 md:p-2 flex flex-col md:flex-row gap-3 md:gap-2">
+              <div className="flex-1 flex items-center px-4 md:px-5 min-h-[48px] md:min-h-0">
                 <Search className="h-5 w-5 text-muted-foreground mr-3 flex-shrink-0" />
                 <Input
                   type="text"
                   placeholder="Search jobs, skills, or describe your ideal role..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="border-0 focus-visible:ring-0 text-foreground"
+                  className="border-0 focus-visible:ring-0 text-foreground placeholder:text-sm md:placeholder:text-base"
                   autoFocus
                 />
               </div>
-              <div className="relative p-[2px]">
+              <div className="relative p-[2px] w-full md:w-auto">
                 {/* Animated glowing outline */}
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                   <div className="absolute inset-0 rounded-full animate-spin-border" 
@@ -497,13 +497,13 @@ export default function Home() {
                 </div>
                 <Button
                   size="lg"
-                  className="group relative overflow-visible rounded-full px-8 bg-gradient-to-b from-[#7c3aed] via-[#6366f1] to-[#4f46e5] text-white shadow-[0_8px_32px_rgba(99,102,241,0.4),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(99,102,241,0.6),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105 border-0"
+                  className="group relative overflow-visible rounded-full w-full md:w-auto px-8 bg-gradient-to-b from-[#7c3aed] via-[#6366f1] to-[#4f46e5] text-white shadow-[0_8px_32px_rgba(99,102,241,0.4),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(99,102,241,0.6),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-2px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105 border-0"
                   aria-label="Search Jobs"
                 >
                   {/* Inner glow */}
                   <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent"></span>
                   {/* Content */}
-                  <span className="relative flex items-center gap-2">
+                  <span className="relative flex items-center justify-center gap-2">
                     <Wand2 className="h-5 w-5 opacity-90 transition-transform duration-200 group-hover:rotate-12 group-hover:scale-110" />
                     Search Jobs
                   </span>
